@@ -1,0 +1,25 @@
+{
+  "binary_threshold": 0.11,
+  "type_map": {
+    "OTP_PIN": "OTP_CREDENTIAL",
+    "KYC": "OTP_CREDENTIAL",
+    "FAKE_PAYMENT": "PAYMENT_FRAUD",
+    "CASHBACK_REWARD": "PAYMENT_FRAUD",
+    "QR_CODE": "PAYMENT_FRAUD",
+    "IMPERSONATION": "IMPERSONATION_OTHER",
+    "OTHER_UPI_SCAM": "IMPERSONATION_OTHER"
+  },
+  "model_note": "Deployment bundle retrained from the stored UPI final dataset; QR_CODE synthetic augmentation includes 30 training-only messages.",
+  "classes": {
+    "scam_type": [
+      "OTP_CREDENTIAL",
+      "PAYMENT_FRAUD",
+      "IMPERSONATION_OTHER"
+    ],
+    "urgency": [
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ]
+  }
+}
